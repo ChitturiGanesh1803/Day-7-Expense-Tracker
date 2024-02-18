@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Expense Tracker</title>
+    <link rel="stylesheet" href="et.css">
+</head>
+<body>
+    <div class="container">
+        <h1><u>Expense Tracker</u></h1>
+        <form id="expenseForm">
+            <label for="date">Date:</label>
+            <input type="date" id="date" required><br><br>
+
+            <label for="amount">Amount:</label>
+            <input type="number" id="amount" required><br><br>
+
+            <label for="category">Category:</label>
+            <select id="category" required>
+                <option value="-">----</option>
+                <option value="food">Food</option>
+                <option value="transportation">Transportation</option>
+                <option value="housing">Housing</option>
+                <option value="entertainment">Entertainment</option>
+                <option value="utilities">Utilities</option>
+                <option value="others">Others</option>
+            </select><br><br>
+    
+    
+     
+            <label for="description">Description:</label>
+            <input type="text" id="description"><br><br>
+
+            <button type="button" onclick="addExpense()">Add Expense</button>
+        </form>
+
+        <table id="expenseTable">
+            <thead>
+                <tr>
+                    <th>Date</th>
+                    <th>Amount</th>
+                    <th>Category</th>
+                    <th>Des</th>
+                    <th>Edit</th>
+                </tr>
+            </thead>
+            <tbody id="expenseList">
+                
+            </tbody>
+            <tfoot>
+                <tr>
+                    <td colspan="4" align="right">Total:</td>
+                    <td id="totalExpense">0</td>
+                </tr>
+            </tfoot>
+        </table>
+    </div>
+    <script src="et.js"></script>
+</body>
+</html>
